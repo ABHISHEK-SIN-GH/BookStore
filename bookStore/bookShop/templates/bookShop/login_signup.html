@@ -4,22 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Log In</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSVTU</title>
     <link rel="stylesheet" href="{% static 'bookShop/css/login_signup.css' %}">
     <Link rel="stylesheet" href="{% static 'bookShop/css/home.css' %}">
 </head>
 
 <body>
-
-    <nav class="navbar">
-        <div class="nav">
-            <img src="{% static 'bookShop/img/bit_logo.png' %}" class="brand-logo" alt="">
-            <div class="nav-items">
-                <a href="{% url 'auth' %}"><img src="{% static 'bookShop/img/User.png' %}" class="icon" alt=""></a>
-            </div>
-        </div>
-    </nav>
 
     <div class="hero">
         <div class="form-box">
@@ -49,11 +40,6 @@
                 <button type="submit" class="submit_btn">Register</button>
             </form>
         </div>
-        
-        {% block content %}
-            {% include 'bookShop/footer.html' %}
-        {% endblock content %}
-            
     </div>
 
     <script>
