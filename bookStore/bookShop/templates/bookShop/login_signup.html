@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+    <link rel="stylesheet" href="{% static 'bookShop/css/login_signup.css' %}">
+    <Link rel="stylesheet" href="{% static 'bookShop/css/home.css' %}">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="nav">
+            <img src="{% static 'bookShop/img/bit_logo.png' %}" class="brand-logo" alt="">
+            <div class="nav-items">
+                <a href="{% url 'auth' %}"><img src="{% static 'bookShop/img/User.png' %}" class="icon" alt=""></a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <div class="form-box">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="login()">Log In</button>
+                <button type="button" class="toggle-btn" onclick="register()">Register</button>
+            </div>
+            <!-- <div class="social-icons">
+                <img src="{% static 'bookShop/img/fb.png' %}">
+                <img src="{% static 'bookShop/img/twitter.png' %}">
+                <img src="{% static 'bookShop/img/insta.png' %}">
+            </div> -->
+            <form id="login" class="input-group" action="{% url 'login' %}" method="POST">
+                {% csrf_token %}
+                <input type="text" class="input-field" placeholder="Enrollment Number" required name="username">
+                <input type="text" class="input-field" placeholder="Enter Password" required name="password">
+                <input type="checkbox" class="check-box"><span>Remember Password</span>
+                <button type="submit" class="submit_btn">Log In</button>
+            </form>
+            <form id="register" class="input-group" action="{% url 'register' %}" method="POST">
+                {% csrf_token %}
+                <input type="text" class="input-field" placeholder="Enrollment Number" required name="username">
+                <input type="email" class="input-field" placeholder="E-mail" required name="email">
+                <input type="text" class="input-field" placeholder="Enter Password" required name="password">
+                <input type="checkbox" class="check-box"><span>I agree to the terms & conditions</span>
+                <button type="submit" class="submit_btn">Register</button>
+            </form>
+        </div>
+        
+        {% block content %}
+            {% include 'bookShop/footer.html' %}
+        {% endblock content %}
+            
+    </div>
+
+    <script>
+        var x = document.getElementById("login");
+        var y = document.getElementById("register");
+        var z = document.getElementById("btn");
+
+        function register() {
+            x.style.left = "-400px";
+            y.style.left = "50px";
+            z.style.left = "110px";
+        }
+
+        function login() {
+            x.style.left = "50px";
+            y.style.left = "450px";
+            z.style.left = "0";
+        }
+    </script>
+
+</body>
+
+</html>
