@@ -1,146 +1,119 @@
 {% extends 'bookShop/header.html' %}
-{% block body %}
 {% load static %}
+{% block content %}
 
-<body>
-    
-    <nav class="navbar">
-        <div class="nav">
-            <img src="{% static 'bookShop/img/bit_logo.png' %}" class="brand-logo" alt="">
-            <div class="nav-items">
-                <div class="search">
-                    <input type="text" class="search-box" placeholder="Search Books or Subject">
-                    <button class="search-btn">Search</button>
-                </div>
-                <a href="{% url 'auth' %}"><img src="{% static 'bookShop/img/User.png' %}" class="icon" alt=""></a>
-                <a href="#"><img src="{% static 'bookShop/img/cart.png' %}" class="icon" alt=""></a>
+<!-- hero section-->
+<header class="hero-section">
+    <div class="content">
+        <img src="{% static 'bookShop/img/books_notes.png' %}" class="logo" alt="">
+        <p class="sub-heading">CSVTU</p>
+    </div>
+</header>
+
+<!-- cards-container -->
+<section class="product">
+    <h2 class="product-category">Best Books</h2>
+    <button class="pre-btn"><img src="{% static 'bookShop/img/arrow.png' %}" alt="arrow"></button>
+    <button class="nxt-btn"><img src="{% static 'bookShop/img/arrow.png' %}" alt="arrow"></button>
+    <div class="product-container">
+        <div class="product-card">
+            <div class="product-image">
+                <span class="discount-tag">Best Seller</span>
+                <img src="{% static 'bookShop/img/bs_garewal.jpg' %}" class="product-thumb" alt="">
+                <button class="card-btn">add to whislist</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">B.S. Grewal</h2>
+                <p class="product-short-des">This book a comprehensive guide for B.Sc And Engineering and computer science students and also for mathematics fields.</p>
+                <span class="price">Rs 500</span> <span class="actual-price">Rs 800</span>
             </div>
         </div>
-        <ul class="links-container">
-            <li class="link-item"> <a href="{% url 'home' %}" class="link" style="color:black; opacity: 1;">Home</a></li>
-            <li class="link-item"> <a href="{% url 'syllabus' %}" class="link">Syllabus</a></li>
-            <li class="link-item"> <a href="{% url 'notes' %}" class="link">Notes</a></li>
-            <li class="link-item"> <a href="{% url 'manuals' %}" class="link">Lab Manual</a></li>
-            <li class="link-item"> <a href="{% url 'books' %}" class="link">Books</a></li>
-        </ul>
-    </nav>
-
-    <!-- hero section-->
-    <header class="hero-section">
-        <div class="content">
-            <img src="{% static 'bookShop/img/books_notes.png' %}" class="logo" alt="">
-            <p class="sub-heading">CSVTU</p>
-        </div>
-    </header>
-
-    <!-- cards-container -->
-    <section class="product">
-        <h2 class="product-category">Best Books</h2>
-        <button class="pre-btn"><img src="{% static 'bookShop/img/arrow.png' %}" alt="arrow"></button>
-        <button class="nxt-btn"><img src="{% static 'bookShop/img/arrow.png' %}" alt="arrow"></button>
-        <div class="product-container">
-            <div class="product-card">
-                <div class="product-image">
-                    <span class="discount-tag">Best Seller</span>
-                    <img src="{% static 'bookShop/img/bs_garewal.jpg' %}" class="product-thumb" alt="">
-                    <button class="card-btn">add to whislist</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">B.S. Grewal</h2>
-                    <p class="product-short-des">This book a comprehensive guide for B.Sc And Engineering and computer science students and also for mathematics fields.</p>
-                    <span class="price">Rs 500</span> <span class="actual-price">Rs 800</span>
-                </div>
+        <div class="product-card">
+            <div class="product-image">
+                <span class="discount-tag">Best Seller</span>
+                <img src="{% static 'bookShop/img/c_programming.jpg' %}" class="product-thumb" alt="">
+                <button class="card-btn">add to whislist</button>
             </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <span class="discount-tag">Best Seller</span>
-                    <img src="{% static 'bookShop/img/c_programming.jpg' %}" class="product-thumb" alt="">
-                    <button class="card-btn">add to whislist</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">The C Programming Language</h2>
-                    <p class="product-short-des">A short description about book</p>
-                    <span class="price">Rs 400</span> <span class="actual-price">Rs 600</span>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <span class="discount-tag">Best Seller</span>
-                    <img src="{% static 'bookShop/img/CS.jpg' %}" class="product-thumb" alt="">
-                    <button class="card-btn">add to whislist</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">Control System Engineering</h2>
-                    <p class="product-short-des">A short description about book</p>
-                    <span class="price">Rs 400</span> <span class="actual-price">Rs 600</span>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <span class="discount-tag">Best Seller</span>
-                    <img src="{% static 'bookShop/img/DC.jpg' %}" class="product-thumb" alt="">
-                    <button class="card-btn">add to whislist</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">Digital Communication</h2>
-                    <p class="product-short-des">A short description about book</p>
-                    <span class="price">Rs 400</span> <span class="actual-price">Rs 600</span>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <span class="discount-tag">Best Seller</span>
-                    <img src="{% static 'bookShop/img/java.png' %}" class="product-thumb" alt="">
-                    <button class="card-btn">add to whislist</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">The Complete Reference JAVA</h2>
-                    <p class="product-short-des">A short description about book</p>
-                    <span class="price">Rs 400</span> <span class="actual-price">Rs 600</span>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <span class="discount-tag">Best Seller</span>
-                    <img src="{% static 'bookShop/img/micro.jpg' %}" class="product-thumb" alt="">
-                    <button class="card-btn">add to whislist</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">Microcontrollers</h2>
-                    <p class="product-short-des">A short description about book</p>
-                    <span class="price">Rs 400</span> <span class="actual-price">Rs 600</span>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <span class="discount-tag">Best Seller</span>
-                    <img src="{% static 'bookShop/img/NAS.jpg' %}" class="product-thumb" alt="">
-                    <button class="card-btn">add to whislist</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">Network Analysis</h2>
-                    <p class="product-short-des">A short description about book</p>
-                    <span class="price">Rs 400</span> <span class="actual-price">Rs 600</span>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <span class="discount-tag">Best Seller</span>
-                    <img src="{% static 'bookShop/img/PDC.jpg' %}" class="product-thumb" alt="">
-                    <button class="card-btn">add to whislist</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">Power Devices & Circuits</h2>
-                    <p class="product-short-des">A short description about book</p>
-                    <span class="price">Rs 400</span> <span class="actual-price">Rs 600</span>
-                </div>
+            <div class="product-info">
+                <h2 class="product-brand">The C Programming Language</h2>
+                <p class="product-short-des">A short description about book</p>
+                <span class="price">Rs 400</span> <span class="actual-price">Rs 600</span>
             </div>
         </div>
-    </section>
+        <div class="product-card">
+            <div class="product-image">
+                <span class="discount-tag">Best Seller</span>
+                <img src="{% static 'bookShop/img/CS.jpg' %}" class="product-thumb" alt="">
+                <button class="card-btn">add to whislist</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">Control System Engineering</h2>
+                <p class="product-short-des">A short description about book</p>
+                <span class="price">Rs 400</span> <span class="actual-price">Rs 600</span>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                <span class="discount-tag">Best Seller</span>
+                <img src="{% static 'bookShop/img/DC.jpg' %}" class="product-thumb" alt="">
+                <button class="card-btn">add to whislist</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">Digital Communication</h2>
+                <p class="product-short-des">A short description about book</p>
+                <span class="price">Rs 400</span> <span class="actual-price">Rs 600</span>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                <span class="discount-tag">Best Seller</span>
+                <img src="{% static 'bookShop/img/java.png' %}" class="product-thumb" alt="">
+                <button class="card-btn">add to whislist</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">The Complete Reference JAVA</h2>
+                <p class="product-short-des">A short description about book</p>
+                <span class="price">Rs 400</span> <span class="actual-price">Rs 600</span>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                <span class="discount-tag">Best Seller</span>
+                <img src="{% static 'bookShop/img/micro.jpg' %}" class="product-thumb" alt="">
+                <button class="card-btn">add to whislist</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">Microcontrollers</h2>
+                <p class="product-short-des">A short description about book</p>
+                <span class="price">Rs 400</span> <span class="actual-price">Rs 600</span>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                <span class="discount-tag">Best Seller</span>
+                <img src="{% static 'bookShop/img/NAS.jpg' %}" class="product-thumb" alt="">
+                <button class="card-btn">add to whislist</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">Network Analysis</h2>
+                <p class="product-short-des">A short description about book</p>
+                <span class="price">Rs 400</span> <span class="actual-price">Rs 600</span>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                <span class="discount-tag">Best Seller</span>
+                <img src="{% static 'bookShop/img/PDC.jpg' %}" class="product-thumb" alt="">
+                <button class="card-btn">add to whislist</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">Power Devices & Circuits</h2>
+                <p class="product-short-des">A short description about book</p>
+                <span class="price">Rs 400</span> <span class="actual-price">Rs 600</span>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <script src="{% static 'bookShop/js/home.js' %}"></script>
-
-</body>
-
-{% endblock body %}
+{% endblock content %}
     

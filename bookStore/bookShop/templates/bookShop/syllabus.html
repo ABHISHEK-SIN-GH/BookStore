@@ -1,706 +1,678 @@
 {% extends 'bookShop/header.html' %}
-{% block body %}
 {% load static %}
+{% block content %}
+<h1 class="heading">Syllabus</h1>
 
-<body>
-
-    <nav class="navbar">
-        <div class="nav">
-            <img src="{% static 'bookShop/img/bit_logo.png' %}" class="brand-logo" alt="">
-            <div class="nav-items">
-                <div class="search">
-                    <input type="text" class="search-box" placeholder="Search Books or Subject">
-                    <button class="search-btn">Search</button>
-                </div>
-                <a href="{% url 'auth' %}"><img src="{% static 'bookShop/img/User.png' %}" class="icon" alt=""></a>
-                <a href="#"><img src="{% static 'bookShop/img/cart.png' %}" class="icon" alt=""></a>
+<!-- Card-Container-->
+<section class="product" id="cse">
+    <h2 class="product-category">Computer Science Engineering</h2>
+    <button class="pre-btn"><img src="{% static 'bookShop/img/arrow.png' %}" alt="button"></button>
+    <button class="nxt-btn"><img src="{% static 'bookShop/img/arrow.png' %}" alt="button"></button>
+    <div class="product-container">
+        <div class="product-card">
+            <div class="product-image">
+                <!-- <span class="discount-tag">Computer Science Engineering</span> -->
+                <img src="{% static 'bookShop/img/CSE/1st_sem.png' %}" class="product-thumb" alt="">
+                <button class="card-btn">Download</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">First Semester</h2>
             </div>
         </div>
-        <ul class="links-container">
-            <li class="link-item"> <a href="{% url 'home' %}" class="link" >Home</a></li>
-            <li class="link-item"> <a href="{% url 'syllabus' %}" class="link" style="color:black; opacity: 1;">Syllabus</a></li>
-            <li class="link-item"> <a href="{% url 'notes' %}" class="link">Notes</a></li>
-            <li class="link-item"> <a href="{% url 'manuals' %}" class="link">Lab Manual</a></li>
-            <li class="link-item"> <a href="{% url 'books' %}" class="link" >Books</a></li>
-        </ul>
-    </nav>
-
-    <h1 class="heading">Syllabus</h1>
-
-    <!-- Card-Container-->
-    <section class="product" id="cse">
-        <h2 class="product-category">Computer Science Engineering</h2>
-        <button class="pre-btn"><img src="{% static 'bookShop/img/arrow.png' %}" alt="button"></button>
-        <button class="nxt-btn"><img src="{% static 'bookShop/img/arrow.png' %}" alt="button"></button>
-        <div class="product-container">
-            <div class="product-card">
-                <div class="product-image">
-                    <!-- <span class="discount-tag">Computer Science Engineering</span> -->
-                    <img src="{% static 'bookShop/img/CSE/1st_sem.png' %}" class="product-thumb" alt="">
-                    <button class="card-btn">Download</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">First Semester</h2>
-                </div>
+        <div class="product-card">
+            <div class="product-image">
+                <!-- <span class="discount-tag">Best Seller</span> -->
+                <img src="{% static 'bookShop/img/CSE/2nd_sem.png' %}" class="product-thumb" alt="">
+                <button class="card-btn">Download</button>
             </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <!-- <span class="discount-tag">Best Seller</span> -->
-                    <img src="{% static 'bookShop/img/CSE/2nd_sem.png' %}" class="product-thumb" alt="">
-                    <button class="card-btn">Download</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">Second Semester</h2>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <!-- <span class="discount-tag">Best Seller</span> -->
-                    <img src="{% static 'bookShop/img/CSE/3rd_sem.png' %}" class="product-thumb" alt="">
-                    <button class="card-btn">Download</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">Third Semester</h2>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <!-- <span class="discount-tag">Best Seller</span> -->
-                    <img src="{% static 'bookShop/img/CSE/4th_sem.png' %}" class="product-thumb" alt="">
-                    <button class="card-btn">Download</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">Fourth Semester</h2>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <!-- <span class="discount-tag">Best Seller</span> -->
-                    <img src="{% static 'bookShop/img/CSE/5th_sem.png' %}" class="product-thumb" alt="">
-                    <button class="card-btn">Download</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">Fifth Semester</h2>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <!-- <span class="discount-tag">Best Seller</span> -->
-                    <img src="{% static 'bookShop/img/CSE/6th_sem.png' %}" class="product-thumb" alt="">
-                    <button class="card-btn">Download</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">Sixth Semester</h2>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <!-- <span class="discount-tag">Best Seller</span> -->
-                    <img src="{% static 'bookShop/img/CSE/7th_sem.png' %}" class="product-thumb" alt="">
-                    <button class="card-btn">Download</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">Seventh Semester</h2>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <!-- <span class="discount-tag">Best Seller</span> -->
-                    <img src="{% static 'bookShop/img/CSE/8th_sem.png' %}" class="product-thumb" alt="">
-                    <button class="card-btn">Download</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">Eight Semester</h2>
-                </div>
+            <div class="product-info">
+                <h2 class="product-brand">Second Semester</h2>
             </div>
         </div>
-    </section>
-
-    <!-- Card-Container-->
-    <section class="product">
-        <h2 class="product-category" id="it">Information Technology</h2>
-        <button class="pre-btn"><img src="{% static 'bookShop/img/arrow.png' %}" alt="button"></button>
-        <button class="nxt-btn"><img src="{% static 'bookShop/img/arrow.png' %}" alt="button"></button>
-        <div class="product-container">
-            <div class="product-card">
-                <div class="product-image">
-                    <!-- <span class="discount-tag">Computer Science Engineering</span> -->
-                    <img src="{% static 'bookShop/img/IT/1st_sem.png' %}" class="product-thumb" alt="">
-                    <button class="card-btn">Download</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">First Semester</h2>
-                </div>
+        <div class="product-card">
+            <div class="product-image">
+                <!-- <span class="discount-tag">Best Seller</span> -->
+                <img src="{% static 'bookShop/img/CSE/3rd_sem.png' %}" class="product-thumb" alt="">
+                <button class="card-btn">Download</button>
             </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <!-- <span class="discount-tag">Best Seller</span> -->
-                    <img src="{% static 'bookShop/img/IT/2nd_sem.png' %}" class="product-thumb" alt="">
-                    <button class="card-btn">Download</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">Second Semester</h2>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <!-- <span class="discount-tag">Best Seller</span> -->
-                    <img src="{% static 'bookShop/img/IT/3rd_sem.png' %}" class="product-thumb" alt="">
-                    <button class="card-btn">Download</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">Third Semester</h2>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <!-- <span class="discount-tag">Best Seller</span> -->
-                    <img src="{% static 'bookShop/img/IT/4th_sem.png' %}" class="product-thumb" alt="">
-                    <button class="card-btn">Download</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">Fourth Semester</h2>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <!-- <span class="discount-tag">Best Seller</span> -->
-                    <img src="{% static 'bookShop/img/IT/5th_sem.png' %}" class="product-thumb" alt="">
-                    <button class="card-btn">Download</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">Fifth Semester</h2>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <!-- <span class="discount-tag">Best Seller</span> -->
-                    <img src="{% static 'bookShop/img/IT/6th_sem.png' %}" class="product-thumb" alt="">
-                    <button class="card-btn">Download</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">Sixth Semester</h2>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <!-- <span class="discount-tag">Best Seller</span> -->
-                    <img src="{% static 'bookShop/img/IT/7th_sem.png' %}" class="product-thumb" alt="">
-                    <button class="card-btn">Download</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">Seventh Semester</h2>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <!-- <span class="discount-tag">Best Seller</span> -->
-                    <img src="{% static 'bookShop/img/IT/8th_sem.png' %}" class="product-thumb" alt="">
-                    <button class="card-btn">Download</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">Eight Semester</h2>
-                </div>
+            <div class="product-info">
+                <h2 class="product-brand">Third Semester</h2>
             </div>
         </div>
-    </section>
-
-    <!-- Card-Container-->
-    <section class="product">
-        <h2 class="product-category" id="etc">Electronics & Telecommunication Engineering</h2>
-        <button class="pre-btn"><img src="{% static 'bookShop/img/arrow.png' %}" alt="button"></button>
-        <button class="nxt-btn"><img src="{% static 'bookShop/img/arrow.png' %}" alt="button"></button>
-        <div class="product-container">
-            <div class="product-card">
-                <div class="product-image">
-                    <!-- <span class="discount-tag">Computer Science Engineering</span> -->
-                    <img src="{% static 'bookShop/img/ETC/1st_sem.png' %}" class="product-thumb" alt="">
-                    <button class="card-btn">Download</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">First Semester</h2>
-                </div>
+        <div class="product-card">
+            <div class="product-image">
+                <!-- <span class="discount-tag">Best Seller</span> -->
+                <img src="{% static 'bookShop/img/CSE/4th_sem.png' %}" class="product-thumb" alt="">
+                <button class="card-btn">Download</button>
             </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <!-- <span class="discount-tag">Best Seller</span> -->
-                    <img src="{% static 'bookShop/img/ETC/2nd_sem.png' %}" class="product-thumb" alt="">
-                    <button class="card-btn">Download</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">Second Semester</h2>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <!-- <span class="discount-tag">Best Seller</span> -->
-                    <img src="{% static 'bookShop/img/ETC/3rd_sem.png' %}" class="product-thumb" alt="">
-                    <button class="card-btn">Download</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">Third Semester</h2>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <!-- <span class="discount-tag">Best Seller</span> -->
-                    <img src="{% static 'bookShop/img/ETC/4th_sem.png' %}" class="product-thumb" alt="">
-                    <button class="card-btn">Download</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">Fourth Semester</h2>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <!-- <span class="discount-tag">Best Seller</span> -->
-                    <img src="{% static 'bookShop/img/ETC/5th_sem.png' %}" class="product-thumb" alt="">
-                    <button class="card-btn">Download</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">Fifth Semester</h2>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <!-- <span class="discount-tag">Best Seller</span> -->
-                    <img src="{% static 'bookShop/img/ETC/6th_sem.png' %}" class="product-thumb" alt="">
-                    <button class="card-btn">Download</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">Sixth Semester</h2>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <!-- <span class="discount-tag">Best Seller</span> -->
-                    <img src="{% static 'bookShop/img/ETC/7th_sem.png' %}" class="product-thumb" alt="">
-                    <button class="card-btn">Download</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">Seventh Semester</h2>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <!-- <span class="discount-tag">Best Seller</span> -->
-                    <img src="{% static 'bookShop/img/ETC/8th_sem.png' %}" class="product-thumb" alt="">
-                    <button class="card-btn">Download</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">Eight Semester</h2>
-                </div>
+            <div class="product-info">
+                <h2 class="product-brand">Fourth Semester</h2>
             </div>
         </div>
-    </section>
-
-    <!-- Card-Container-->
-    <section class="product">
-        <h2 class="product-category" id="ee">Electrical Engineering</h2>
-        <button class="pre-btn"><img src="{% static 'bookShop/img/arrow.png' %}" alt="button"></button>
-        <button class="nxt-btn"><img src="{% static 'bookShop/img/arrow.png' %}" alt="button"></button>
-        <div class="product-container">
-            <div class="product-card">
-                <div class="product-image">
-                    <!-- <span class="discount-tag">Computer Science Engineering</span> -->
-                    <img src="{% static 'bookShop/img/EE/1st_sem.png' %}" class="product-thumb" alt="">
-                    <button class="card-btn">Download</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">First Semester</h2>
-                </div>
+        <div class="product-card">
+            <div class="product-image">
+                <!-- <span class="discount-tag">Best Seller</span> -->
+                <img src="{% static 'bookShop/img/CSE/5th_sem.png' %}" class="product-thumb" alt="">
+                <button class="card-btn">Download</button>
             </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <!-- <span class="discount-tag">Best Seller</span> -->
-                    <img src="{% static 'bookShop/img/EE/2nd_sem.png' %}" class="product-thumb" alt="">
-                    <button class="card-btn">Download</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">Second Semester</h2>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <!-- <span class="discount-tag">Best Seller</span> -->
-                    <img src="{% static 'bookShop/img/EE/3rd_sem.png' %}" class="product-thumb" alt="">
-                    <button class="card-btn">Download</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">Third Semester</h2>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <!-- <span class="discount-tag">Best Seller</span> -->
-                    <img src="{% static 'bookShop/img/EE/4th_sem.png' %}" class="product-thumb" alt="">
-                    <button class="card-btn">Download</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">Fourth Semester</h2>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <!-- <span class="discount-tag">Best Seller</span> -->
-                    <img src="{% static 'bookShop/img/EE/5th_sem.png' %}" class="product-thumb" alt="">
-                    <button class="card-btn">Download</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">Fifth Semester</h2>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <!-- <span class="discount-tag">Best Seller</span> -->
-                    <img src="{% static 'bookShop/img/EE/6th_sem.png' %}" class="product-thumb" alt="">
-                    <button class="card-btn">Download</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">Sixth Semester</h2>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <!-- <span class="discount-tag">Best Seller</span> -->
-                    <img src="{% static 'bookShop/img/EE/7th_sem.png' %}" class="product-thumb" alt="">
-                    <button class="card-btn">Download</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">Seventh Semester</h2>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <!-- <span class="discount-tag">Best Seller</span> -->
-                    <img src="{% static 'bookShop/img/EE/8th_sem.png' %}" class="product-thumb" alt="">
-                    <button class="card-btn">Download</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">Eight Semester</h2>
-                </div>
+            <div class="product-info">
+                <h2 class="product-brand">Fifth Semester</h2>
             </div>
         </div>
-    </section>
-
-    <!-- Card-Container-->
-    <section class="product">
-        <h2 class="product-category" id="eee">Electrical & Electronics Engineering</h2>
-        <button class="pre-btn"><img src="{% static 'bookShop/img/arrow.png' %}" alt="button"></button>
-        <button class="nxt-btn"><img src="{% static 'bookShop/img/arrow.png' %}" alt="button"></button>
-        <div class="product-container">
-            <div class="product-card">
-                <div class="product-image">
-                    <!-- <span class="discount-tag">Computer Science Engineering</span> -->
-                    <img src="{% static 'bookShop/img/EEE/1st_sem.png' %}" class="product-thumb" alt="">
-                    <button class="card-btn">Download</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">First Semester</h2>
-                </div>
+        <div class="product-card">
+            <div class="product-image">
+                <!-- <span class="discount-tag">Best Seller</span> -->
+                <img src="{% static 'bookShop/img/CSE/6th_sem.png' %}" class="product-thumb" alt="">
+                <button class="card-btn">Download</button>
             </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <!-- <span class="discount-tag">Best Seller</span> -->
-                    <img src="{% static 'bookShop/img/EEE/2nd_sem.png' %}" class="product-thumb" alt="">
-                    <button class="card-btn">Download</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">Second Semester</h2>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <!-- <span class="discount-tag">Best Seller</span> -->
-                    <img src="{% static 'bookShop/img/EEE/3rd_sem.png' %}" class="product-thumb" alt="">
-                    <button class="card-btn">Download</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">Third Semester</h2>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <!-- <span class="discount-tag">Best Seller</span> -->
-                    <img src="{% static 'bookShop/img/EEE/4th_sem.png' %}" class="product-thumb" alt="">
-                    <button class="card-btn">Download</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">Fourth Semester</h2>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <!-- <span class="discount-tag">Best Seller</span> -->
-                    <img src="{% static 'bookShop/img/EEE/5th_sem.png' %}" class="product-thumb" alt="">
-                    <button class="card-btn">Download</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">Fifth Semester</h2>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <!-- <span class="discount-tag">Best Seller</span> -->
-                    <img src="{% static 'bookShop/img/EEE/6th_sem.png' %}" class="product-thumb" alt="">
-                    <button class="card-btn">Download</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">Sixth Semester</h2>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <!-- <span class="discount-tag">Best Seller</span> -->
-                    <img src="{% static 'bookShop/img/EEE/7th_sem.png' %}" class="product-thumb" alt="">
-                    <button class="card-btn">Download</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">Seventh Semester</h2>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <!-- <span class="discount-tag">Best Seller</span> -->
-                    <img src="{% static 'bookShop/img/EEE/8th_sem.png' %}" class="product-thumb" alt="">
-                    <button class="card-btn">Download</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">Eight Semester</h2>
-                </div>
+            <div class="product-info">
+                <h2 class="product-brand">Sixth Semester</h2>
             </div>
         </div>
-    </section>
-
-    <!-- Card-Container-->
-    <section class="product">
-        <h2 class="product-category" id="mech">Mechanical Engineering</h2>
-        <button class="pre-btn"><img src="{% static 'bookShop/img/arrow.png' %}" alt="button"></button>
-        <button class="nxt-btn"><img src="{% static 'bookShop/img/arrow.png' %}" alt="button"></button>
-        <div class="product-container">
-            <div class="product-card">
-                <div class="product-image">
-                    <!-- <span class="discount-tag">Computer Science Engineering</span> -->
-                    <img src="{% static 'bookShop/img/MECH/1st_sem.png' %}" class="product-thumb" alt="">
-                    <button class="card-btn">Download</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">First Semester</h2>
-                </div>
+        <div class="product-card">
+            <div class="product-image">
+                <!-- <span class="discount-tag">Best Seller</span> -->
+                <img src="{% static 'bookShop/img/CSE/7th_sem.png' %}" class="product-thumb" alt="">
+                <button class="card-btn">Download</button>
             </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <!-- <span class="discount-tag">Best Seller</span> -->
-                    <img src="{% static 'bookShop/img/MECH/2nd_sem.png' %}" class="product-thumb" alt="">
-                    <button class="card-btn">Download</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">Second Semester</h2>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <!-- <span class="discount-tag">Best Seller</span> -->
-                    <img src="{% static 'bookShop/img/MECH/3rd_sem.png' %}" class="product-thumb" alt="">
-                    <button class="card-btn">Download</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">Third Semester</h2>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <!-- <span class="discount-tag">Best Seller</span> -->
-                    <img src="{% static 'bookShop/img/MECH/4th_sem.png' %}" class="product-thumb" alt="">
-                    <button class="card-btn">Download</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">Fourth Semester</h2>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <!-- <span class="discount-tag">Best Seller</span> -->
-                    <img src="{% static 'bookShop/img/MECH/5th_sem.png' %}" class="product-thumb" alt="">
-                    <button class="card-btn">Download</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">Fifth Semester</h2>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <!-- <span class="discount-tag">Best Seller</span> -->
-                    <img src="{% static 'bookShop/img/MECH/6th_sem.png' %}" class="product-thumb" alt="">
-                    <button class="card-btn">Download</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">Sixth Semester</h2>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <!-- <span class="discount-tag">Best Seller</span> -->
-                    <img src="{% static 'bookShop/img/MECH/7th_sem.png' %}" class="product-thumb" alt="">
-                    <button class="card-btn">Download</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">Seventh Semester</h2>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <!-- <span class="discount-tag">Best Seller</span> -->
-                    <img src="{% static 'bookShop/img/MECH/8th_sem.png' %}" class="product-thumb" alt="">
-                    <button class="card-btn">Download</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">Eight Semester</h2>
-                </div>
+            <div class="product-info">
+                <h2 class="product-brand">Seventh Semester</h2>
             </div>
         </div>
-    </section>
-
-    <!-- Card-Container-->
-    <section class="product">
-        <h2 class="product-category" id="civil">Civil Engineering</h2>
-        <button class="pre-btn"><img src="{% static 'bookShop/img/arrow.png' %}" alt="button"></button>
-        <button class="nxt-btn"><img src="{% static 'bookShop/img/arrow.png' %}" alt="button"></button>
-        <div class="product-container">
-            <div class="product-card">
-                <div class="product-image">
-                    <!-- <span class="discount-tag">Computer Science Engineering</span> -->
-                    <img src="{% static 'bookShop/img/CIVIL/1st_sem.png' %}" class="product-thumb" alt="">
-                    <button class="card-btn">Download</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">First Semester</h2>
-                </div>
+        <div class="product-card">
+            <div class="product-image">
+                <!-- <span class="discount-tag">Best Seller</span> -->
+                <img src="{% static 'bookShop/img/CSE/8th_sem.png' %}" class="product-thumb" alt="">
+                <button class="card-btn">Download</button>
             </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <!-- <span class="discount-tag">Best Seller</span> -->
-                    <img src="{% static 'bookShop/img/CIVIL/2nd_sem.png' %}" class="product-thumb" alt="">
-                    <button class="card-btn">Download</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">Second Semester</h2>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <!-- <span class="discount-tag">Best Seller</span> -->
-                    <img src="{% static 'bookShop/img/CIVIL/3rd_sem.png' %}" class="product-thumb" alt="">
-                    <button class="card-btn">Download</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">Third Semester</h2>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <!-- <span class="discount-tag">Best Seller</span> -->
-                    <img src="{% static 'bookShop/img/CIVIL/4th_sem.png' %}" class="product-thumb" alt="">
-                    <button class="card-btn">Download</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">Fourth Semester</h2>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <!-- <span class="discount-tag">Best Seller</span> -->
-                    <img src="{% static 'bookShop/img/CIVIL/5th_sem.png' %}" class="product-thumb" alt="">
-                    <button class="card-btn">Download</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">Fifth Semester</h2>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <!-- <span class="discount-tag">Best Seller</span> -->
-                    <img src="{% static 'bookShop/img/CIVIL/6th_sem.png' %}" class="product-thumb" alt="">
-                    <button class="card-btn">Download</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">Sixth Semester</h2>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <!-- <span class="discount-tag">Best Seller</span> -->
-                    <img src="{% static 'bookShop/img/CIVIL/7th_sem.png' %}" class="product-thumb" alt="">
-                    <button class="card-btn">Download</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">Seventh Semester</h2>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <!-- <span class="discount-tag">Best Seller</span> -->
-                    <img src="{% static 'bookShop/img/CIVIL/8th_sem.png' %}" class="product-thumb" alt="">
-                    <button class="card-btn">Download</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">Eight Semester</h2>
-                </div>
+            <div class="product-info">
+                <h2 class="product-brand">Eight Semester</h2>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Card-Container-->
-    <section class="product">
-        <h2 class="product-category" id="mba">Masters of Business Communication</h2>
-        <!-- <button class="pre-btn"><img src="{% static 'bookShop/img/arrow.png' %}" alt="button"></button>
-        <button class="nxt-btn"><img src="{% static 'bookShop/img/arrow.png' %}" alt="button"></button> -->
-        <div class="product-container">
-            <div class="product-card">
-                <div class="product-image">
-                    <!-- <span class="discount-tag">Computer Science Engineering</span> -->
-                    <img src="{% static 'bookShop/img/MBA/1st_sem.png' %}" class="product-thumb" alt="">
-                    <button class="card-btn">Download</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">First Semester</h2>
-                </div>
+<!-- Card-Container-->
+<section class="product">
+    <h2 class="product-category" id="it">Information Technology</h2>
+    <button class="pre-btn"><img src="{% static 'bookShop/img/arrow.png' %}" alt="button"></button>
+    <button class="nxt-btn"><img src="{% static 'bookShop/img/arrow.png' %}" alt="button"></button>
+    <div class="product-container">
+        <div class="product-card">
+            <div class="product-image">
+                <!-- <span class="discount-tag">Computer Science Engineering</span> -->
+                <img src="{% static 'bookShop/img/IT/1st_sem.png' %}" class="product-thumb" alt="">
+                <button class="card-btn">Download</button>
             </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <!-- <span class="discount-tag">Best Seller</span> -->
-                    <img src="{% static 'bookShop/img/MBA/2nd_sem.png' %}" class="product-thumb" alt="">
-                    <button class="card-btn">Download</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">Second Semester</h2>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <!-- <span class="discount-tag">Best Seller</span> -->
-                    <img src="{% static 'bookShop/img/MBA/3rd_sem.png' %}" class="product-thumb" alt="">
-                    <button class="card-btn">Download</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">Third Semester</h2>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <!-- <span class="discount-tag">Best Seller</span> -->
-                    <img src="{% static 'bookShop/img/MBA/4th_sem.png' %}" class="product-thumb" alt="">
-                    <button class="card-btn">Download</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">Fourth Semester</h2>
-                </div>
+            <div class="product-info">
+                <h2 class="product-brand">First Semester</h2>
             </div>
         </div>
-    </section>
+        <div class="product-card">
+            <div class="product-image">
+                <!-- <span class="discount-tag">Best Seller</span> -->
+                <img src="{% static 'bookShop/img/IT/2nd_sem.png' %}" class="product-thumb" alt="">
+                <button class="card-btn">Download</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">Second Semester</h2>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                <!-- <span class="discount-tag">Best Seller</span> -->
+                <img src="{% static 'bookShop/img/IT/3rd_sem.png' %}" class="product-thumb" alt="">
+                <button class="card-btn">Download</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">Third Semester</h2>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                <!-- <span class="discount-tag">Best Seller</span> -->
+                <img src="{% static 'bookShop/img/IT/4th_sem.png' %}" class="product-thumb" alt="">
+                <button class="card-btn">Download</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">Fourth Semester</h2>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                <!-- <span class="discount-tag">Best Seller</span> -->
+                <img src="{% static 'bookShop/img/IT/5th_sem.png' %}" class="product-thumb" alt="">
+                <button class="card-btn">Download</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">Fifth Semester</h2>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                <!-- <span class="discount-tag">Best Seller</span> -->
+                <img src="{% static 'bookShop/img/IT/6th_sem.png' %}" class="product-thumb" alt="">
+                <button class="card-btn">Download</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">Sixth Semester</h2>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                <!-- <span class="discount-tag">Best Seller</span> -->
+                <img src="{% static 'bookShop/img/IT/7th_sem.png' %}" class="product-thumb" alt="">
+                <button class="card-btn">Download</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">Seventh Semester</h2>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                <!-- <span class="discount-tag">Best Seller</span> -->
+                <img src="{% static 'bookShop/img/IT/8th_sem.png' %}" class="product-thumb" alt="">
+                <button class="card-btn">Download</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">Eight Semester</h2>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <script src="{% static 'bookShop/js/home.js' %}"></script>
+<!-- Card-Container-->
+<section class="product">
+    <h2 class="product-category" id="etc">Electronics & Telecommunication Engineering</h2>
+    <button class="pre-btn"><img src="{% static 'bookShop/img/arrow.png' %}" alt="button"></button>
+    <button class="nxt-btn"><img src="{% static 'bookShop/img/arrow.png' %}" alt="button"></button>
+    <div class="product-container">
+        <div class="product-card">
+            <div class="product-image">
+                <!-- <span class="discount-tag">Computer Science Engineering</span> -->
+                <img src="{% static 'bookShop/img/ETC/1st_sem.png' %}" class="product-thumb" alt="">
+                <button class="card-btn">Download</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">First Semester</h2>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                <!-- <span class="discount-tag">Best Seller</span> -->
+                <img src="{% static 'bookShop/img/ETC/2nd_sem.png' %}" class="product-thumb" alt="">
+                <button class="card-btn">Download</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">Second Semester</h2>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                <!-- <span class="discount-tag">Best Seller</span> -->
+                <img src="{% static 'bookShop/img/ETC/3rd_sem.png' %}" class="product-thumb" alt="">
+                <button class="card-btn">Download</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">Third Semester</h2>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                <!-- <span class="discount-tag">Best Seller</span> -->
+                <img src="{% static 'bookShop/img/ETC/4th_sem.png' %}" class="product-thumb" alt="">
+                <button class="card-btn">Download</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">Fourth Semester</h2>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                <!-- <span class="discount-tag">Best Seller</span> -->
+                <img src="{% static 'bookShop/img/ETC/5th_sem.png' %}" class="product-thumb" alt="">
+                <button class="card-btn">Download</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">Fifth Semester</h2>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                <!-- <span class="discount-tag">Best Seller</span> -->
+                <img src="{% static 'bookShop/img/ETC/6th_sem.png' %}" class="product-thumb" alt="">
+                <button class="card-btn">Download</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">Sixth Semester</h2>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                <!-- <span class="discount-tag">Best Seller</span> -->
+                <img src="{% static 'bookShop/img/ETC/7th_sem.png' %}" class="product-thumb" alt="">
+                <button class="card-btn">Download</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">Seventh Semester</h2>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                <!-- <span class="discount-tag">Best Seller</span> -->
+                <img src="{% static 'bookShop/img/ETC/8th_sem.png' %}" class="product-thumb" alt="">
+                <button class="card-btn">Download</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">Eight Semester</h2>
+            </div>
+        </div>
+    </div>
+</section>
 
-</body>
+<!-- Card-Container-->
+<section class="product">
+    <h2 class="product-category" id="ee">Electrical Engineering</h2>
+    <button class="pre-btn"><img src="{% static 'bookShop/img/arrow.png' %}" alt="button"></button>
+    <button class="nxt-btn"><img src="{% static 'bookShop/img/arrow.png' %}" alt="button"></button>
+    <div class="product-container">
+        <div class="product-card">
+            <div class="product-image">
+                <!-- <span class="discount-tag">Computer Science Engineering</span> -->
+                <img src="{% static 'bookShop/img/EE/1st_sem.png' %}" class="product-thumb" alt="">
+                <button class="card-btn">Download</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">First Semester</h2>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                <!-- <span class="discount-tag">Best Seller</span> -->
+                <img src="{% static 'bookShop/img/EE/2nd_sem.png' %}" class="product-thumb" alt="">
+                <button class="card-btn">Download</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">Second Semester</h2>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                <!-- <span class="discount-tag">Best Seller</span> -->
+                <img src="{% static 'bookShop/img/EE/3rd_sem.png' %}" class="product-thumb" alt="">
+                <button class="card-btn">Download</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">Third Semester</h2>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                <!-- <span class="discount-tag">Best Seller</span> -->
+                <img src="{% static 'bookShop/img/EE/4th_sem.png' %}" class="product-thumb" alt="">
+                <button class="card-btn">Download</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">Fourth Semester</h2>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                <!-- <span class="discount-tag">Best Seller</span> -->
+                <img src="{% static 'bookShop/img/EE/5th_sem.png' %}" class="product-thumb" alt="">
+                <button class="card-btn">Download</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">Fifth Semester</h2>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                <!-- <span class="discount-tag">Best Seller</span> -->
+                <img src="{% static 'bookShop/img/EE/6th_sem.png' %}" class="product-thumb" alt="">
+                <button class="card-btn">Download</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">Sixth Semester</h2>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                <!-- <span class="discount-tag">Best Seller</span> -->
+                <img src="{% static 'bookShop/img/EE/7th_sem.png' %}" class="product-thumb" alt="">
+                <button class="card-btn">Download</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">Seventh Semester</h2>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                <!-- <span class="discount-tag">Best Seller</span> -->
+                <img src="{% static 'bookShop/img/EE/8th_sem.png' %}" class="product-thumb" alt="">
+                <button class="card-btn">Download</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">Eight Semester</h2>
+            </div>
+        </div>
+    </div>
+</section>
 
-{% endblock body %}
+<!-- Card-Container-->
+<section class="product">
+    <h2 class="product-category" id="eee">Electrical & Electronics Engineering</h2>
+    <button class="pre-btn"><img src="{% static 'bookShop/img/arrow.png' %}" alt="button"></button>
+    <button class="nxt-btn"><img src="{% static 'bookShop/img/arrow.png' %}" alt="button"></button>
+    <div class="product-container">
+        <div class="product-card">
+            <div class="product-image">
+                <!-- <span class="discount-tag">Computer Science Engineering</span> -->
+                <img src="{% static 'bookShop/img/EEE/1st_sem.png' %}" class="product-thumb" alt="">
+                <button class="card-btn">Download</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">First Semester</h2>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                <!-- <span class="discount-tag">Best Seller</span> -->
+                <img src="{% static 'bookShop/img/EEE/2nd_sem.png' %}" class="product-thumb" alt="">
+                <button class="card-btn">Download</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">Second Semester</h2>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                <!-- <span class="discount-tag">Best Seller</span> -->
+                <img src="{% static 'bookShop/img/EEE/3rd_sem.png' %}" class="product-thumb" alt="">
+                <button class="card-btn">Download</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">Third Semester</h2>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                <!-- <span class="discount-tag">Best Seller</span> -->
+                <img src="{% static 'bookShop/img/EEE/4th_sem.png' %}" class="product-thumb" alt="">
+                <button class="card-btn">Download</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">Fourth Semester</h2>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                <!-- <span class="discount-tag">Best Seller</span> -->
+                <img src="{% static 'bookShop/img/EEE/5th_sem.png' %}" class="product-thumb" alt="">
+                <button class="card-btn">Download</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">Fifth Semester</h2>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                <!-- <span class="discount-tag">Best Seller</span> -->
+                <img src="{% static 'bookShop/img/EEE/6th_sem.png' %}" class="product-thumb" alt="">
+                <button class="card-btn">Download</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">Sixth Semester</h2>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                <!-- <span class="discount-tag">Best Seller</span> -->
+                <img src="{% static 'bookShop/img/EEE/7th_sem.png' %}" class="product-thumb" alt="">
+                <button class="card-btn">Download</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">Seventh Semester</h2>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                <!-- <span class="discount-tag">Best Seller</span> -->
+                <img src="{% static 'bookShop/img/EEE/8th_sem.png' %}" class="product-thumb" alt="">
+                <button class="card-btn">Download</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">Eight Semester</h2>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Card-Container-->
+<section class="product">
+    <h2 class="product-category" id="mech">Mechanical Engineering</h2>
+    <button class="pre-btn"><img src="{% static 'bookShop/img/arrow.png' %}" alt="button"></button>
+    <button class="nxt-btn"><img src="{% static 'bookShop/img/arrow.png' %}" alt="button"></button>
+    <div class="product-container">
+        <div class="product-card">
+            <div class="product-image">
+                <!-- <span class="discount-tag">Computer Science Engineering</span> -->
+                <img src="{% static 'bookShop/img/MECH/1st_sem.png' %}" class="product-thumb" alt="">
+                <button class="card-btn">Download</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">First Semester</h2>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                <!-- <span class="discount-tag">Best Seller</span> -->
+                <img src="{% static 'bookShop/img/MECH/2nd_sem.png' %}" class="product-thumb" alt="">
+                <button class="card-btn">Download</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">Second Semester</h2>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                <!-- <span class="discount-tag">Best Seller</span> -->
+                <img src="{% static 'bookShop/img/MECH/3rd_sem.png' %}" class="product-thumb" alt="">
+                <button class="card-btn">Download</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">Third Semester</h2>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                <!-- <span class="discount-tag">Best Seller</span> -->
+                <img src="{% static 'bookShop/img/MECH/4th_sem.png' %}" class="product-thumb" alt="">
+                <button class="card-btn">Download</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">Fourth Semester</h2>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                <!-- <span class="discount-tag">Best Seller</span> -->
+                <img src="{% static 'bookShop/img/MECH/5th_sem.png' %}" class="product-thumb" alt="">
+                <button class="card-btn">Download</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">Fifth Semester</h2>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                <!-- <span class="discount-tag">Best Seller</span> -->
+                <img src="{% static 'bookShop/img/MECH/6th_sem.png' %}" class="product-thumb" alt="">
+                <button class="card-btn">Download</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">Sixth Semester</h2>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                <!-- <span class="discount-tag">Best Seller</span> -->
+                <img src="{% static 'bookShop/img/MECH/7th_sem.png' %}" class="product-thumb" alt="">
+                <button class="card-btn">Download</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">Seventh Semester</h2>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                <!-- <span class="discount-tag">Best Seller</span> -->
+                <img src="{% static 'bookShop/img/MECH/8th_sem.png' %}" class="product-thumb" alt="">
+                <button class="card-btn">Download</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">Eight Semester</h2>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Card-Container-->
+<section class="product">
+    <h2 class="product-category" id="civil">Civil Engineering</h2>
+    <button class="pre-btn"><img src="{% static 'bookShop/img/arrow.png' %}" alt="button"></button>
+    <button class="nxt-btn"><img src="{% static 'bookShop/img/arrow.png' %}" alt="button"></button>
+    <div class="product-container">
+        <div class="product-card">
+            <div class="product-image">
+                <!-- <span class="discount-tag">Computer Science Engineering</span> -->
+                <img src="{% static 'bookShop/img/CIVIL/1st_sem.png' %}" class="product-thumb" alt="">
+                <button class="card-btn">Download</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">First Semester</h2>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                <!-- <span class="discount-tag">Best Seller</span> -->
+                <img src="{% static 'bookShop/img/CIVIL/2nd_sem.png' %}" class="product-thumb" alt="">
+                <button class="card-btn">Download</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">Second Semester</h2>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                <!-- <span class="discount-tag">Best Seller</span> -->
+                <img src="{% static 'bookShop/img/CIVIL/3rd_sem.png' %}" class="product-thumb" alt="">
+                <button class="card-btn">Download</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">Third Semester</h2>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                <!-- <span class="discount-tag">Best Seller</span> -->
+                <img src="{% static 'bookShop/img/CIVIL/4th_sem.png' %}" class="product-thumb" alt="">
+                <button class="card-btn">Download</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">Fourth Semester</h2>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                <!-- <span class="discount-tag">Best Seller</span> -->
+                <img src="{% static 'bookShop/img/CIVIL/5th_sem.png' %}" class="product-thumb" alt="">
+                <button class="card-btn">Download</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">Fifth Semester</h2>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                <!-- <span class="discount-tag">Best Seller</span> -->
+                <img src="{% static 'bookShop/img/CIVIL/6th_sem.png' %}" class="product-thumb" alt="">
+                <button class="card-btn">Download</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">Sixth Semester</h2>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                <!-- <span class="discount-tag">Best Seller</span> -->
+                <img src="{% static 'bookShop/img/CIVIL/7th_sem.png' %}" class="product-thumb" alt="">
+                <button class="card-btn">Download</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">Seventh Semester</h2>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                <!-- <span class="discount-tag">Best Seller</span> -->
+                <img src="{% static 'bookShop/img/CIVIL/8th_sem.png' %}" class="product-thumb" alt="">
+                <button class="card-btn">Download</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">Eight Semester</h2>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Card-Container-->
+<section class="product">
+    <h2 class="product-category" id="mba">Masters of Business Communication</h2>
+    <!-- <button class="pre-btn"><img src="{% static 'bookShop/img/arrow.png' %}" alt="button"></button>
+    <button class="nxt-btn"><img src="{% static 'bookShop/img/arrow.png' %}" alt="button"></button> -->
+    <div class="product-container">
+        <div class="product-card">
+            <div class="product-image">
+                <!-- <span class="discount-tag">Computer Science Engineering</span> -->
+                <img src="{% static 'bookShop/img/MBA/1st_sem.png' %}" class="product-thumb" alt="">
+                <button class="card-btn">Download</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">First Semester</h2>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                <!-- <span class="discount-tag">Best Seller</span> -->
+                <img src="{% static 'bookShop/img/MBA/2nd_sem.png' %}" class="product-thumb" alt="">
+                <button class="card-btn">Download</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">Second Semester</h2>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                <!-- <span class="discount-tag">Best Seller</span> -->
+                <img src="{% static 'bookShop/img/MBA/3rd_sem.png' %}" class="product-thumb" alt="">
+                <button class="card-btn">Download</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">Third Semester</h2>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                <!-- <span class="discount-tag">Best Seller</span> -->
+                <img src="{% static 'bookShop/img/MBA/4th_sem.png' %}" class="product-thumb" alt="">
+                <button class="card-btn">Download</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">Fourth Semester</h2>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock content %}

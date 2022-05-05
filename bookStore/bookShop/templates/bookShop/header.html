@@ -12,9 +12,36 @@
   <link rel="stylesheet" href="{% static 'bookShop/css/footer.css' %}" />
 </head>
 
-{% block body %}
+<body>
+  
+  <nav class="navbar">
+    <div class="nav">
+        <img src="{% static 'bookShop/img/bit_logo.png' %}" class="brand-logo" alt="">
+        <div class="nav-items">
+            <div class="search">
+                <input type="text" class="search-box" placeholder="Search Books or Subject">
+                <button class="search-btn">Search</button>
+            </div>
+            <a href="{% url 'auth' %}"><img src="{% static 'bookShop/img/User.png' %}" class="icon" alt=""></a>
+            <a href="#"><img src="{% static 'bookShop/img/cart.png' %}" class="icon" alt=""></a>
+        </div>
+    </div>
+    <ul class="links-container">
+        <li class="link-item"> <a href="{% url 'home' %}" class="link" style="color:black; opacity: 1;">Home</a></li>
+        <li class="link-item"> <a href="{% url 'syllabus' %}" class="link">Syllabus</a></li>
+        <li class="link-item"> <a href="{% url 'notes' %}" class="link">Notes</a></li>
+        <li class="link-item"> <a href="{% url 'manuals' %}" class="link">Lab Manual</a></li>
+        <li class="link-item"> <a href="{% url 'books' %}" class="link">Books</a></li>
+    </ul>
+</nav>
 
-{% endblock body %}
+{% block content %}
+  
+{% endblock content %}
+
+<script src="{% static 'bookShop/js/home.js' %}"></script>
+
+</body>
     
 <footer>
   <div class="footer-content">
