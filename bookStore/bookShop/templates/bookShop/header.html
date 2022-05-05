@@ -27,11 +27,11 @@
         </div>
     </div>
     <ul class="links-container">
-        <li class="link-item"> <a href="{% url 'home' %}" class="link" style="color:black; opacity: 1;">Home</a></li>
-        <li class="link-item"> <a href="{% url 'syllabus' %}" class="link">Syllabus</a></li>
-        <li class="link-item"> <a href="{% url 'notes' %}" class="link">Notes</a></li>
-        <li class="link-item"> <a href="{% url 'manuals' %}" class="link">Lab Manual</a></li>
-        <li class="link-item"> <a href="{% url 'books' %}" class="link">Books</a></li>
+        <li class="link-item"> <a href="{% url 'home' %}" class="link {{activeHome}}">Home</a></li>
+        <li class="link-item"> <a href="{% url 'syllabus' %}" class="link {{activeSyllabus}}">Syllabus</a></li>
+        <li class="link-item"> <a href="{% url 'notes' %}" class="link {{activeNotes}}">Notes</a></li>
+        <li class="link-item"> <a href="{% url 'manuals' %}" class="link {{activeManuals}}">Lab Manual</a></li>
+        <li class="link-item"> <a href="{% url 'books' %}" class="link {{activeBooks}}">Books</a></li>
     </ul>
 </nav>
 

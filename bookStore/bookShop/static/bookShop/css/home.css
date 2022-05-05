@@ -10,6 +10,11 @@
     align-items: center;
 }
 
+.active{
+    color:black; 
+    opacity: 1;
+}
+
 .hero-section .logo {
     height: 150px;
     display: block;

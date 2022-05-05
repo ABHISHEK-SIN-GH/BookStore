@@ -11,23 +11,23 @@ def auth(request):
 
 @login_required
 def home(request):
-    return render(request,'bookShop/index.html',{})
+    return render(request,'bookShop/index.html',{"activeHome":"active"})
 
 @login_required    
 def syllabus(request):
-    return render(request,'bookShop/syllabus.html',{})
+    return render(request,'bookShop/syllabus.html',{"activeSyllabus":"active"})
 
 @login_required
 def notes(request):
-    return render(request,'bookShop/notes.html',{})
+    return render(request,'bookShop/notes.html',{"activeNotes":"active"})
 
 @login_required
 def manuals(request):
-    return render(request,'bookShop/manual.html',{})
+    return render(request,'bookShop/manual.html',{"activeManuals":"active"})
 
 @login_required
 def books(request):
-    return render(request,'bookShop/book.html',{})
+    return render(request,'bookShop/book.html',{"activeBooks":"active"})
 
 def register(request):
     if request.method == 'POST':
